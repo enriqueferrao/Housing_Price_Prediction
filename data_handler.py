@@ -25,7 +25,7 @@ def load_columns_data():
     print('All Files Loaded')
 
 def make_predictions(location,sqft,bath,balcony,bhk):
-    loc_index = __data_columns.index(location.lower())
+    loc_index = __data_columns.index(location.lower())   #TODO : Put a try except block so if location index is not found then set other as 1
     x = np.zeros(len(__data_columns))
     
     x[0] = sqft
